@@ -1,9 +1,55 @@
-// Programmers: Matthew Clifford - Partner: Xander Gergye
-// Date: 5.26.23
-// Program: Competition
+//Programmers: Matthew Clifford - Xander Gergye
+//Date:5.26.23
+//Program: Competition
+//number:SB-33DF
 
 
 async function startProgram() {
-	// Write code here
-}
+	await scrollMatrixText('Start', {r: 0, g: 255, b: 0 }, 18, true);
+	await roll(0, 50, 3.6);
+	await delay(3)
+	
+	setMainLed({r: 0, g: 0, b: 255});
+	await roll(90, 50, 2.52);
+	
+	await delay(3)
+	await Sound.Animal.play(true);
+	await roll(180, 46, 2);
+	await delay(3)
+	
+	await roll(220, 42.5, 2);
+	await delay(3)
+	setMainLed({r: 255, g: 0, b: 0});
+	
+	await delay(3)
+	await roll(130, 30, 2);
+	
+	await delay(3)
+	await roll(42, 45, 2);
+	
+	await delay(3)
+	await Sound.Animal.play(true);
+	await roll(130, 35, 2);
+	await delay(3)
 
+	await roll(216, 25, 3)
+	setMainLed({r: 0, g: 255, b: 0});
+	await delay(3)
+
+	await roll(120, 26, 4)
+	await delay(3)
+	
+	await roll(33, 44, 2)
+	await delay(3)
+	
+	await roll(348, 25, 2)
+	await Sound.Animal.play(true);
+	await delay(3)
+	
+	await roll(348, 30, 2)
+	await delay(3)
+	
+	await roll(25, 40, 2)
+	setMainLed({r: 255, g: 0, b: 255});
+	await delay(3)
+}
